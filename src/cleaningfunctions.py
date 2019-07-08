@@ -67,3 +67,28 @@ def pipeline_clean2(df):
     df.drop(['city'],axis=1,inplace=True)
     df.avg_rating_by_driver = df.avg_rating_by_driver.apply(lambda x: rbd(x))
     return df
+
+
+def pct(x):
+    if x == 100.0:
+        return 100
+    elif x >= 90.0:
+        return 90
+    elif x >= 80.0:
+        return 80
+    elif x >= 70.0:
+        return 70
+    elif x >= 60.0:
+        return 60
+    elif x >= 50.0:
+        return 50
+    elif x >= 40.0:
+        return 40
+    elif x >= 30.0:
+        return 30
+    elif x >= 20.0:
+        return 20
+    elif x >= 10.0:
+        return 10
+    else:
+        return 0
